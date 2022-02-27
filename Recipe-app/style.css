@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Poppins:wght@200;400;600&family=Raleway:wght@200;400;600&family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ECECEC;
+  background: -webkit-linear-gradient(top left, #ECECEC, #B9B9B9);
+  background: -moz-linear-gradient(top left, #ECECEC, #B9B9B9);
+  background: linear-gradient(to bottom right, #ECECEC, #B9B9B9);
+}
+
+img{
+  width: 100%;
+}
+
+.mobile-container{
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px 2px #3333331a;
+  border-radius: 3px;
+  overflow: hidden;
+  width: 400px;
+}
+
+.mobile-container .search-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.mobile-container .search-bar input{
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 3px;
+  padding: .3rem .8rem;
+}
+
+.mobile-container .search-bar button{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.fav-bar{
+  padding: 1rem 0.5rem 0.5rem;
+  background-color: #F7F9FF;
+  box-shadow: 0 0 10px 2px #3333331a;
+}
+
+.fav-bar ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.fav-bar li{
+  width: 75px;
+  margin: 0 .7rem;
+  position: relative;
+}
+
+.fav-bar li:hover .clear{
+  display: inline;
+
+}
+
+.fav-bar img{
+  object-fit: cover;
+  width: 75px;
+  border-radius: 50%;
+  border: 2px solid #ffffff80;
+  box-shadow: 0 0 10px 2px #3333331a;
+  cursor: pointer;
+}
+
+.fav-bar .clear{
+  display: none;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: -0.4rem;
+  right: -0.4rem;
+  color: rgb(255, 139, 118);
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.fav-bar span{
+  display: inline-block;
+  font-size: .7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 60px;
+  color: #555;
+}
+
+.meals{
+  margin: 1.7rem;
+  /* overflow: hidden; */
+}
+
+.meal{
+  position: relative;
+  /* box-shadow: 0 0 10px 2px #3333331a; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.meal h4{
+  position: absolute;
+  top: 1.5rem;
+  left: -.1rem;
+  background-color: #ffffff;
+  border-radius: 0 4px 4px 0;
+  padding: 0.2rem 1rem;
+  color: #8b8b8b;
+  font-weight: 400;
+  box-shadow: 0 0 10px 2px #3333331a;
+}
+
+.meal img{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.meal-title{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 0.8rem ;
+}
+
+.meal-title span{
+  color: #444;
+}
+
+.meal .fav-btn{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #ddd;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 400ms ease;
+}
+
+.meal .fav-btn.active{
+  transition: all 400ms ease;
+  color: tomato;
+}
+
+.popup-container{
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.popup-container.hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup{
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  background-color: #fff;
+  padding: 0 .5rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  overflow: scroll;
+}
+
+
+.popup .close-popup{
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: rgb(255, 0, 0);
+  float: right;
+  position: sticky;
+  top: 0;
+  cursor: pointer;
+}
+
+.meal-info{
+  padding: 1.5rem;
+}
+
+.meal-info h1{
+  text-align: center;
+}
+
+.meal-info h3{
+  margin-top: 1rem;
+}
+
+.meal-info img{
+  border-radius: 5px;
+  margin: 1rem 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.meal-info ul{
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+
